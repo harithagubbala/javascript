@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <html>
+    <head>
+        <style>
+            img{
+                height:200px;
+                width:200px;
+                padding:10px;
+            }
+            .container{
+                width:80%;
+                margin:auto;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+       <div class="container">
+            <img id="first" src="images/istockphoto-840403762-1024x1024.jpg" onclick="replaceimage1('images/planet-2120004_1280.jpg')">
+            <img id="second" src="images/RJK7TF.jpg" onclick="replaceimage2('images/thumb-1920-26824.jpg')">
+       </div> 
+       <script>
+           var x=document.getElementById("first");
+           var y=document.getElementById("second");
+           function replaceimage1(myimage) {
+                x.src=myimage;
+           }
+           function replaceimage2(myimage) {
+                y.src=myimage;
+           }
+       </script>
+    </body>
+</html>

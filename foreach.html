@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="tableData"></div>
+    <script>
+        // a=[1,2,3,4];
+        // a.forEach(function(value){
+        //     console.log(value);
+        // });
+        var list = {
+            "parent": [{
+                "fname": "abc",
+                "lname": "efg",
+                "class": "A",
+                "gender": "female",
+                "age": 10
+            }, {
+                "fname": "abc",
+                "lname": "efg",
+                "class": "A",
+                "gender": "female",
+                "age": 10
+            }, {
+                "fname": "abc",
+                "lname": "efg",
+                "class": "A",
+                "gender": "female",
+                "age": 10
+            }, {
+                "fname": "abc",
+                "lname": "efg",
+                "class": "A",
+                "gender": "female",
+                "age": 10
+            }, {
+                "fname": "abc",
+                "lname": "efg",
+                "class": "A",
+                "gender": "female",
+                "age": 10
+            }, {
+                "fname": "abc",
+                "lname": "efg",
+                "class": "A",
+                "gender": "female",
+                "age": 10
+            }, {
+                "fname": "abc",
+                "lname": "efg",
+                "class": "A",
+                "gender": "female",
+                "age": 10
+            }, {
+                "fname": "abc",
+                "lname": "efg",
+                "class": "A",
+                "gender": "female",
+                "age": 10
+            }, {
+                "fname": "abc",
+                "lname": "efg",
+                "class": "A",
+                "gender": "female",
+                "age": 10
+            }, {
+                "fname": "abc",
+                "lname": "efg",
+                "class": "A",
+                "gender": "female",
+                "age": 10
+            }, {
+                "fname": "abc",
+                "lname": "efg",
+                "class": "A",
+                "gender": "female",
+                "age": 10
+            }, {
+                "fname": "abc",
+                "lname": "efg",
+                "class": "A",
+                "gender": "female",
+                "age": 10
+            }]
+        }
+    function showList() 
+		{
+			var data = '<table border="1"><tr><th>FName</th><th>LName</th><th>Class</th><th>gender</th><th>age</th></tr>';
+			for (var i = 0; i < list.parent.length; i++) 
+			{
+				data += "<tr><td>" + list.parent[i].fname + "</td><td>" + list.parent[i].lname + "</td><td>" + list.parent[i].class+ 
+                "</td><td>"+list.parent[i].gender+"</td><td>"+list.parent[i].age+"</td></tr>";
+			}
+			data += "</table>"
+			document.getElementById("tableData").innerHTML = data;
+		}
+		showList();
+    </script>
+</body>
+</html>

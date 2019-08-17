@@ -1,0 +1,15 @@
+<script>
+// declaration
+function hoist() {
+  var message;
+  console.log(message);
+  message='Hoisting is all the rage!';
+}
+hoist(); // Ouput: undefined
+// definition or anonymous or named function or function expression
+var hoist2 = function() {
+  var message='Hoisting is all the rage!';
+  return (message);
+}
+console.log(hoist2()); // Ouput: Hoisting is all the rage!
+</script>

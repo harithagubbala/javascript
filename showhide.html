@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <img id="photo" src="images/8051.jpg" onclick="zoom ();">
+        
+
+        <script>
+       var start=0;
+       function zoom(){
+           if(start == 0){
+               originalwidth=photo.width;
+               originalheight=photo.height;
+               photo.width=photo.width*2;
+               photo.height=photo.width*2;
+               start=1;
+           }
+           else{
+               photo.width=originalwidth;
+               photo.height=originalheight;
+               start=0;
+           }
+       }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <!-- one -->
+        <a href="javascript:window.open('','_self').close();">close</a>
+    <script>
+    function leave() {
+        var myWindow = window.open("", "_self");
+        myWindow.document.write("hi");
+        setTimeout (function() {myWindow.close();},1000);
+    }
+    leave();
+    </script>
+
+
+    </body>
+</html>

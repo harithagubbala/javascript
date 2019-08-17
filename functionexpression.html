@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function run() {
+                var x = 123;
+                x = 1234;
+                console.log(x); // 1234
+            
+                console.log('--------run----------');
+            
+                var test = 'hello';
+                console.log(test); // hello
+            
+                printHello(test); // printHello is undefined
+                function printHello(value) {
+                    console.log(value); // wont be called
+                }
+
+                printString(test); // printString is undefined
+                var printString = function (value) {
+                    console.log(value); // wont be called
+                }
+                return 'ok';
+            }
+            run();
+        </script>
+    </body>
+</html>

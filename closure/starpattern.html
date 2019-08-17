@@ -1,0 +1,50 @@
+<script>
+function even(num){
+    for(var i=0;i<num;i++){
+        if(i%3==0){
+            document.write(i+ " <nbsp;>");
+        }
+    }
+}
+function odd(num){
+    for(var i=0;i<num;i++){
+        if(i%3==1){
+            document.write("<br>"+i+"<nbsp;>");
+        }
+    }
+}
+even(10)
+odd(10);
+
+function checkIfEven(num, success, failure ) {
+    if (typeof num === 'number') {
+        
+        if (num % 2 === 0) { 
+            if (typeof success === 'function') {
+                success('num is even');
+            }
+        } else {
+            if (typeof failure === 'function') {
+                failure('num is odd');
+            }
+        }
+    }
+}
+// checkIfEven(20);
+checkIfEven(29, success, failure);
+// checkIfEven(31, success, failure);
+
+function success(msg) {
+    console.log('success');
+    console.log(msg);
+}
+
+function failure (msg) {
+    console.log('failure');
+    console.log(msg);
+}
+var func = function(){
+    console.log('set time out is called');
+};
+setTimeout(func, 3000);
+</script>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body id="one">
+        <input type="text" id="color">
+        <input type="submit" onclick="color();" value="submit">
+        <script>
+            var mycolor=document.getElementById("color");
+            function color (){
+                document.getElementById("one").style.background=mycolor.value;
+            }
+        </script>
+    </body>
+</html>

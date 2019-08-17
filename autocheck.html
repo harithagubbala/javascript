@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <input type="checkbox" value="selectAll" name="check" onclick="autocheck()">SelectAll<br>
+        <input type="checkbox" name="check">HTML
+        <input type="checkbox" name="check">JQUERY
+        <input type="checkbox" name="check">JAVASCRIPT
+    </body>
+    <script>
+    var list = document.getElementsByName("check");
+    var start = 0;
+    function autocheck(){
+        if(start==0){
+            for (var i=0;i<list.length;i++) {
+                list[i].checked = true;
+            }
+            start=1;
+        }
+        else{
+            for(var i=0;i<list.length;i++){
+                list[i].checked = false;
+            }
+            start=0;
+        }
+    }
+    </script>
+</html>

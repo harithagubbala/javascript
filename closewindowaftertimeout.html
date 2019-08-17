@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <button onclick="showNews()">Show News</button>
+    <script>
+        var myWindow;
+        function showNews(){
+            myWindow = window.open("","myWindow","width=200,height=100");
+            myWindow.document.write("<p>This is 'myWindow'</p>");
+            tmot = setTimeout(function(){myWindow.open('http://www.yahoo.com','_self')}, 2000);
+            tmot = setTimeout(function(){
+                                    myWindow.close();}, 5000);
+                            }
+        </script>
+</body>
+</html>

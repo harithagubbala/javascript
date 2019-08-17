@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+img{
+    height:100px;
+    width:100px;
+}
+ul li{
+    display: inline-block;
+    padding:10px;
+}
+</style>
+</head>
+<body>
+    <ul>
+    <li><img src="images/istockphoto-840403762-1024x1024.jpg" class="hide" id="first" onclick="showhide('first');"></li>
+    <li><img src="images/planet-2120004_1280.jpg" class="hide" id="second" onclick="showhide('second');"></li>
+    <li><img src="images/RJK7TF.jpg" class="hide" id="third" onclick="showhide('third');"></li>
+    <li><img src="images/thumb-1920-26824.jpg" class="hide" id="fourth" onclick="showhide('fourth');"></li>
+</ul>
+<script>
+    var start=0;
+    var divs = document.getElementsByClassName("hide");
+    function showhide(id) {
+        if(start==0){
+            divid = document.getElementById(id);
+            originalw=divid.style.width;
+            originalh=divid.style.height;
+                for(var i=0;i<divs.length;i++) {
+                    divs[i].style.display = "none";
+                }
+            divid.style.display = "block";
+            divid.style.width =  "700px";
+            divid.style.height =  "700px";
+            start=1;
+        }
+        else{
+            divid.style.width=originalw;
+            divid.style.height=originalh;
+            for(var i=0;i<divs.length;i++) {
+                    divs[i].style.display = "block";
+            }
+            start=0;
+        }
+     }
+</script>
+</body>
+</html>

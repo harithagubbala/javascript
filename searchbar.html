@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input type="text" id="inputdata" onchange="search(this);"/>
+    <div id="tableData"></div>
+<script>
+var list = {
+            "parent": [{
+                "fname": "haritha",
+                "lname": "efg",
+                "class": "A",
+                "gender": "female",
+                "age": 10
+            }, {
+                "fname": "ramani",
+                "lname": "efg",
+                "class": "A",
+                "gender": "female",
+                "age": 10
+            }, {
+                "fname": "rani",
+                "lname": "efg",
+                "class": "A",
+                "gender": "female",
+                "age": 10
+            }]
+    };
+    function showList() {
+		var data = '<table border="1"><tr><th>FName</th><th>LName</th><th>Class</th><th>gender</th><th>age</th></tr>';
+		for (var i = 0; i < list.parent.length; i++) {
+            data += "<tr><td>" + list.parent[i].fname + "</td><td>" + list.parent[i].lname + "</td><td>" + list.parent[i].class+ 
+            "</td><td>"+list.parent[i].gender+"</td><td>"+list.parent[i].age+"</td></tr>";
+        }
+        data += "</table>"
+        document.getElementById("tableData").innerHTML = data;
+    }
+	showList();
+    function search(x){
+        for (var i = 0; i < list.parent.length; i++) {
+            if(list.parent[i].fname.includes(x.value)){
+                document.write(list.parent[i].fname+" <nbsp;>"+list.parent[i].lname+" <nbsp;>"+
+                list.parent[i].class+" <nbsp;>"+list.parent[i].gender+" <nbsp;>"+list.parent[i].age+"<br>");
+            }
+        }
+    }
+</script>
+</body>
+</html>

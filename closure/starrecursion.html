@@ -1,0 +1,15 @@
+<script>
+var printrightTriangle = function(n) {    //3  2  1
+    if (n==1){
+     document.write("*");
+     document.write("<br>");                     //first print * when n=1 then
+    }
+    else{
+     printrightTriangle(n-1);
+     for (var i=0;i<n;i++)
+     document.write("*");
+     document.write("<br>");   
+    }
+}                                       // ends recursively
+printrightTriangle(4);
+</script>

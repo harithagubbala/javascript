@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <input type="checkbox" id="check1" onclick="checklimit('check1');">
+        <input type="checkbox" id="check2" onclick="checklimit('check2');">
+        <input type="checkbox" id="check3" onclick="checklimit('check3');">
+        <input type="checkbox" id="check4" onclick="checklimit('check4');">
+        <input type="checkbox" id="check5" onclick="checklimit('check5');">
+        <input type="checkbox" id="check6" onclick="checklimit('check6');">
+    </body>
+    <script>
+        var maxvalue = 3;
+        function checklimit(id){
+            var list = document.getElementById(id);
+            if(maxvalue <= 0){
+                alert("u can only select 3 checkboxes");
+                list.checked=false;
+            }
+            else{
+                if(list.checked==true){
+                    maxvalue--;
+                } 
+            }  
+        }
+    </script>
+</html>

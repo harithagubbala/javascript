@@ -1,0 +1,13 @@
+<script>
+        var startTime = new Date(millisecond),
+            timeoutLength = 60000;
+        
+        var interval = setInterval("checkTimeout()",1000);
+        function checkTimeout() {
+            var currentTime = new Date(millisecond);
+            if (currentTime > startTime + timeoutLength) {
+                clearInterval(interval);
+                alert ("Your current Session is over due to inactivity.");
+            }
+        }
+        </script>

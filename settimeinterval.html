@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body id="b">
+    <h1 id="demo" style="color:white"></h1>
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(alertFunc1, 2000);
+  myVar = setTimeout(alertFunc2, 5000);
+  myVar = setTimeout(alertFunc3, 10000);
+}
+
+function alertFunc1() {
+    document.getElementById("demo").innerHTML="blue color will be applied after 5 seconds";
+    document.getElementById("b").style.background="red";
+}
+function alertFunc2() {
+    document.getElementById("demo").innerHTML="green color will be applied after 10 seconds";
+    document.getElementById("b").style.background="blue";
+}
+function alertFunc3() {
+    document.getElementById("demo").innerHTML="Welcome";
+  document.getElementById("b").style.background="green";
+}
+myFunction();
+</script>
+
+</body>
+</html>

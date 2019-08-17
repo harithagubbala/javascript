@@ -1,0 +1,24 @@
+<html>
+
+<body>
+	<div id="tableData"></div>
+	<script>
+		var list = [
+			{ name: "Hedge", contact: 9089908990, email: "hedge@mail.com" },
+			{ name: "Berge", contact: 8089908990, email: "berge@mail.com" },
+			{ name: "Tim", contact: 7089908990, email: "tim@mail.com" }
+		];
+		
+		function showList() {
+			var data = '<table border="1"><tr><th>Name</th><th>Contact</th><th>Email</th></tr>';
+			for (var i = 0; i < list.length; i++) {
+				data += "<tr><td>" + list[i].name + "</td><td>" + list[i].contact + "</td><td>" + list[i].email + "</td></td></tr>";
+			}
+			data += "</table>"
+			document.getElementById("tableData").innerHTML = data;
+		}
+		showList();
+	</script>
+</body>
+
+</html>

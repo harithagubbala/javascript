@@ -1,0 +1,49 @@
+<!DOCTYPE HTML> 
+<html> 
+<head> 
+<style> 
+p { 
+  text-align: center; 
+  font-size: 60px; 
+} 
+#first{
+    background-color: aqua;
+    height:200px;
+    width:100%;
+}
+#second{
+    background-color: aqua;
+    height:200px;
+    width:100%;
+}
+</style> 
+</head> 
+<body> 
+<div id="first">
+<h1>First Page</h1>
+</div>
+<div id="second">
+        <h1>Second</h1>
+        </div>
+<p id="demo"></p> 
+<script> 
+var deadline = new Date("Thu Aug 15 2019 17:43:40").getTime(); 
+var x = setInterval(function() { 
+    var now = new Date().getTime(); 
+    var t = deadline - now; 
+    var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+    var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+    var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+    var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+    document.getElementById("demo").innerHTML = days + "d "  
+    + hours + "h " + minutes + "m " + seconds + "s "; 
+        if (t < 0) { 
+            clearInterval(x); 
+            document.getElementById("demo").innerHTML = "EXPIRED";
+            document.getElementById("second").innerHTML = "this is secondpage";    
+        } 
+    }, 1000);   
+</script> 
+  
+</body> 
+</html> 

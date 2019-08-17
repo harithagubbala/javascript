@@ -1,0 +1,13 @@
+<script>
+    var myVar = 100;
+    
+    function WhoIsThis() {
+        var myVar = 200;
+        document.write(myVar+"<br>"); // 200
+        document.write(this.myVar+"<br>"); // 100
+    }
+    WhoIsThis(); // inferred as window.WhoIsThis()
+    
+    var obj = new WhoIsThis();
+    document.write(obj.myVar+"<br>"); 
+    </script>
